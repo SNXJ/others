@@ -1,0 +1,144 @@
+.header {
+	background: rgb(44, 50, 61); color: rgb(204, 204, 204);
+}
+.header .container-fluid {
+	padding-top: 20px; padding-bottom: 20px;
+}
+.header a {
+	color: rgb(221, 221, 221);
+}
+.header a:hover {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.header .logo {
+	line-height: 34px; font-size: 20px; margin-left: 20px;
+}
+.header .search-form {
+	margin-right: 20px;
+}
+.menu {
+	list-style: none; margin: 40px 20px; padding: 0px;
+}
+.menu .pages {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.menu li {
+	line-height: 30px;
+}
+.menu .category-title {
+	margin: 25px 0px 10px; text-transform: uppercase; font-size: 12px;
+}
+.menu a {
+	color: rgb(136, 136, 136); line-height: 20px; display: inline-block;
+}
+.menu a:hover {
+	color: rgb(68, 68, 68); text-decoration: none;
+}
+.menu .active a {
+	color: rgb(68, 68, 68); font-weight: bold;
+}
+.page-home .header .search-form {
+	display: none;
+}
+.home-search {
+	text-align: center;
+}
+.home-categories {
+	margin: 0px 10px;
+}
+.home-categories .panel-heading {
+	margin: 0px; font-size: 100%; font-weight: normal;
+}
+.home-categories .panel-heading {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.home-categories .panel .page {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.content {
+	margin: 40px 20px; padding: 40px; border: 1px solid rgb(233, 233, 233); border-image: none; color: rgb(85, 85, 85); box-shadow: 0px 1px 50px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 50px rgba(0, 0, 0, 0.1);
+}
+.content .title {
+	margin: 0px 0px 30px;
+}
+.content h1 {
+	color: rgb(34, 34, 34);
+}
+.content h2 {
+	color: rgb(34, 34, 34);
+}
+.content h3 {
+	color: rgb(34, 34, 34);
+}
+.content h4 {
+	color: rgb(34, 34, 34);
+}
+.content h5 {
+	color: rgb(34, 34, 34);
+}
+.content h6 {
+	color: rgb(34, 34, 34);
+}
+.content p {
+	margin-bottom: 1em;
+}
+.content ul {
+	margin-bottom: 1em;
+}
+.content ol {
+	margin-bottom: 1em;
+}
+.content pre {
+	margin-bottom: 1em;
+}
+.content blockquote {
+	margin-bottom: 1em;
+}
+.content table {
+	margin-bottom: 1em;
+}
+.content iframe {
+	margin-bottom: 1em;
+}
+.content img {
+	background: rgb(255, 255, 255); margin: 0px auto; padding: 4px; border-radius: 4px; border: 1px solid rgb(214, 214, 214); border-image: none; height: auto; display: block; max-width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.content code {
+	color: rgb(85, 85, 85); background-color: rgb(255, 253, 220);
+}
+.content pre {
+	background: rgb(255, 253, 220); border: 0px currentColor; border-image: none;
+}
+.content pre code {
+	color: rgb(101, 123, 131);
+}
+.content .hljs {
+	background: none;
+}
+.content .page-meta {
+	color: rgb(153, 153, 153); font-size: 85%; margin-top: 50px;
+}
+.content .page-meta a {
+	color: rgb(153, 153, 153); border-bottom-color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.content .page-meta a:hover {
+	color: rgb(66, 139, 202); text-decoration: none;
+}
+.footer .copyright {
+	margin: 0px 20px 40px 0px; color: rgb(153, 153, 153); font-size: 85%;
+}
+.page-excerpt .search-query {
+	background: rgb(255, 253, 220);
+}
+.error {
+	padding: 0px 20px;
+}
+@media only screen and (max-width:767px)
+{
+.home-search .form-group {
+	margin-bottom: 0px;
+}
+#home-search {
+	margin-bottom: 10px;
+}
+}

@@ -1,0 +1,186 @@
+.hljs {
+	background: rgb(253, 246, 227); padding: 0.5em; color: rgb(101, 123, 131); display: block;
+}
+.hljs-comment {
+	color: rgb(147, 161, 161);
+}
+.hljs-template_comment {
+	color: rgb(147, 161, 161);
+}
+.diff .hljs-header {
+	color: rgb(147, 161, 161);
+}
+.hljs-doctype {
+	color: rgb(147, 161, 161);
+}
+.hljs-pi {
+	color: rgb(147, 161, 161);
+}
+.lisp .hljs-string {
+	color: rgb(147, 161, 161);
+}
+.hljs-javadoc {
+	color: rgb(147, 161, 161);
+}
+.hljs-keyword {
+	color: rgb(133, 153, 0);
+}
+.hljs-winutils {
+	color: rgb(133, 153, 0);
+}
+.method {
+	color: rgb(133, 153, 0);
+}
+.hljs-addition {
+	color: rgb(133, 153, 0);
+}
+.css .hljs-tag {
+	color: rgb(133, 153, 0);
+}
+.hljs-request {
+	color: rgb(133, 153, 0);
+}
+.hljs-status {
+	color: rgb(133, 153, 0);
+}
+.nginx .hljs-title {
+	color: rgb(133, 153, 0);
+}
+.hljs-number {
+	color: rgb(42, 161, 152);
+}
+.hljs-command {
+	color: rgb(42, 161, 152);
+}
+.hljs-string {
+	color: rgb(42, 161, 152);
+}
+.hljs-tag .hljs-value {
+	color: rgb(42, 161, 152);
+}
+.hljs-rules .hljs-value {
+	color: rgb(42, 161, 152);
+}
+.hljs-phpdoc {
+	color: rgb(42, 161, 152);
+}
+.tex .hljs-formula {
+	color: rgb(42, 161, 152);
+}
+.hljs-regexp {
+	color: rgb(42, 161, 152);
+}
+.hljs-hexcolor {
+	color: rgb(42, 161, 152);
+}
+.hljs-link_url {
+	color: rgb(42, 161, 152);
+}
+.hljs-title {
+	color: rgb(38, 139, 210);
+}
+.hljs-localvars {
+	color: rgb(38, 139, 210);
+}
+.hljs-chunk {
+	color: rgb(38, 139, 210);
+}
+.hljs-decorator {
+	color: rgb(38, 139, 210);
+}
+.hljs-built_in {
+	color: rgb(38, 139, 210);
+}
+.hljs-identifier {
+	color: rgb(38, 139, 210);
+}
+.vhdl .hljs-literal {
+	color: rgb(38, 139, 210);
+}
+.hljs-id {
+	color: rgb(38, 139, 210);
+}
+.css .hljs-function {
+	color: rgb(38, 139, 210);
+}
+.hljs-attribute {
+	color: rgb(181, 137, 0);
+}
+.hljs-variable {
+	color: rgb(181, 137, 0);
+}
+.lisp .hljs-body {
+	color: rgb(181, 137, 0);
+}
+.smalltalk .hljs-number {
+	color: rgb(181, 137, 0);
+}
+.hljs-constant {
+	color: rgb(181, 137, 0);
+}
+.hljs-class .hljs-title {
+	color: rgb(181, 137, 0);
+}
+.hljs-parent {
+	color: rgb(181, 137, 0);
+}
+.haskell .hljs-type {
+	color: rgb(181, 137, 0);
+}
+.hljs-link_reference {
+	color: rgb(181, 137, 0);
+}
+.hljs-preprocessor {
+	color: rgb(203, 75, 22);
+}
+.hljs-preprocessor .hljs-keyword {
+	color: rgb(203, 75, 22);
+}
+.hljs-pragma {
+	color: rgb(203, 75, 22);
+}
+.hljs-shebang {
+	color: rgb(203, 75, 22);
+}
+.hljs-symbol {
+	color: rgb(203, 75, 22);
+}
+.hljs-symbol .hljs-string {
+	color: rgb(203, 75, 22);
+}
+.diff .hljs-change {
+	color: rgb(203, 75, 22);
+}
+.hljs-special {
+	color: rgb(203, 75, 22);
+}
+.hljs-attr_selector {
+	color: rgb(203, 75, 22);
+}
+.hljs-subst {
+	color: rgb(203, 75, 22);
+}
+.hljs-cdata {
+	color: rgb(203, 75, 22);
+}
+.clojure .hljs-title {
+	color: rgb(203, 75, 22);
+}
+.css .hljs-pseudo {
+	color: rgb(203, 75, 22);
+}
+.hljs-header {
+	color: rgb(203, 75, 22);
+}
+.hljs-deletion {
+	color: rgb(220, 50, 47);
+}
+.hljs-important {
+	color: rgb(220, 50, 47);
+}
+.hljs-link_label {
+	color: rgb(108, 113, 196);
+}
+.tex .hljs-formula {
+	background: rgb(238, 232, 213);
+}

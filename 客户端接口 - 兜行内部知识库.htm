@@ -1,0 +1,1399 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0040)http://192.168.1.192/接口文档/客户端接口 -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+	 
+<META charset="utf-8">	 
+<META http-equiv="X-UA-Compatible" content="IE=edge">	 <TITLE>客户端接口 - 
+兜行内部知识库</TITLE>		 
+<META name="viewport" content="width=device-width, initial-scale=1">	 <LINK 
+href="/favicon.ico" rel="shortcut icon">	 <LINK href="客户端接口%20-%20兜行内部知识库_files/bootstrap.min.css" 
+rel="stylesheet">	 <LINK href="客户端接口%20-%20兜行内部知识库_files/solarized_light.css" 
+rel="stylesheet">	 <LINK href="客户端接口%20-%20兜行内部知识库_files/raneto.css" rel="stylesheet">
+	 
+<META name="GENERATOR" content="MSHTML 11.00.9600.17924"></HEAD> 
+<BODY class="page-接口文档-客户端接口"><HEADER class="header">
+<DIV class="container-fluid">
+<DIV class="row">
+<DIV class="col-sm-6"><A class="logo" href="http://192.168.1.192/">兜行内部知识库</A>
+				 </DIV>
+<DIV class="col-sm-6">
+<FORM class="search-form form-inline pull-right" role="form" action="/">
+<DIV class="form-group"><LABEL class="sr-only" for="search">Search</LABEL>
+							 <INPUT name="search" class="form-control" id="search" type="search" size="30" placeholder="Search" value=""></DIV></FORM></DIV></DIV></DIV></HEADER>
+<DIV class="container-fluid">
+<DIV class="row">
+<DIV class="col-sm-3">
+<UL class="menu">
+  <LI class="page"><A href="http://192.168.1.192/办公小贴士">办公小贴士</A></LI>
+  <LI class="page"><A href="http://192.168.1.192/新人必读">新人必读</A></LI>
+  <LI class="category">
+  <H5 class="category-title">商业</H5>
+  <UL class="pages">
+    <LI class="page"><A href="http://192.168.1.192/商业/HCM">Hcm</A></LI>
+    <LI class="page"><A 
+    href="http://192.168.1.192/商业/cornerstone">Cornerstone</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/商业/halogen">Halogen</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/商业/workday">Workday</A></LI>
+    <LI class="page"><A 
+href="http://192.168.1.192/商业/常用概念">常用概念</A></LI></UL></LI>
+  <LI class="category">
+  <H5 class="category-title">技术</H5>
+  <UL class="pages">
+    <LI class="page"><A href="http://192.168.1.192/技术/代码管理">代码管理</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/技术/报价参数">报价参数</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/技术/正则表达式">正则表达式</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/技术/版本火车">版本火车</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/技术/系统规格">系统规格</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/技术/线上资源">线上资源</A></LI>
+    <LI class="page"><A 
+href="http://192.168.1.192/技术/统计知识">统计知识</A></LI></UL></LI>
+  <LI class="category">
+  <H5 class="category-title">接口文档</H5>
+  <UL class="pages">
+    <LI class="page"><A href="http://192.168.1.192/接口文档/xml格式">Xml格式</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/接口文档/宏定义">宏定义</A></LI>
+    <LI class="page active"><A 
+    href="http://192.168.1.192/接口文档/客户端接口">客户端接口</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/接口文档/微吼直播接口">微吼直播接口</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/接口文档/数据分析接口">数据分析接口</A></LI>
+    <LI class="page"><A href="http://192.168.1.192/接口文档/管理后台接口">管理后台接口</A></LI>
+    <LI class="page"><A 
+  href="http://192.168.1.192/接口文档/问卷接口">问卷接口</A></LI></UL></LI></UL></DIV>
+<DIV class="col-sm-9"><SECTION class="content">
+<H1 class="title">客户端接口</H1>
+<P><A name="top">&nbsp;</A></P>
+<HR>
+
+<P>接口描述：用户登录</P>
+<P>接口地址：<CODE>/badou/login/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"serial":"10086","pwd":"yyyy","gps":{"lat":0,"lon":0}}</CODE></P>
+<UL>
+  <LI>serial：用户名</LI>
+  <LI>pwd：密码的MD5</LI>
+  <LI>gps.lat：维度，无则传0</LI>
+  <LI>gps.lon：经度，无则传0</LI></UL>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0, 
+    "data":
+    {
+        "uid":"xxxx",
+        "company":"badou",
+        "access":"255",
+        "tag":"badou_1030000",
+        "name":"cmx",
+        "desc":"",
+        "hxpwd":"34a77e",
+        "host":"http:\/\/mworking.cn",
+        "shuffle":
+        {
+            "button_notice":{"name":"通知","priority":"8"},
+            "button_training":{"name":"培训","priority":"7"},
+            "button_exam":{"name":"考试","priority":"6"},
+            "button_task":{"name":"签到","priority":"5"},
+            "button_survey":{"name":"调研","priority":"4"},
+            "button_chatter":{"name":"同事圈","priority":3},
+            "button_ask":{"name":"问答","priority":0}
+        },
+        "lang":"zh",
+        "admin":0
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>uid：用户唯一标识</LI>
+  <LI>company：公司</LI>
+  <LI>access：<A href="http://192.168.1.192/接口文档/宏定义#fe-access">权限码</A></LI>
+  <LI>tag：分组</LI>
+  <LI>name：姓名</LI>
+  <LI>hxpwd：环信登录密码</LI>
+  <LI>host：主机，<STRONG><CODE>客户端后续访问host/interface</CODE></STRONG></LI>
+  <LI>shuffle：模块优先级及名称</LI>
+  <LI>lang：zh为中文，en为英文</LI>
+  <LI>admin：是否管理员，1是0否</LI></UL>
+<P><STRONG> 
+客户端登录后调用极光推送的setTagsWithAlias/setAliasAndTags，用tag作为tag，用uid作为alias。</STRONG></P>
+<HR>
+
+<P>接口描述：发送验证码短信  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/sendsms/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"serial":"18611570887"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：重置密码  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/rstpwd/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"serial":"18611570887","vcode":"385117","newpwd":"bamboo"}</CODE></P>
+<UL>
+  <LI>serial：手机号码</LI>
+  <LI>vcode：验证码</LI>
+  <LI>newpwd：新密码</LI></UL>
+<P>返回结果：<CODE>同login</CODE></P>
+<HR>
+
+<P>接口描述：修改密码  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/chgpwd/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","oldpwd":"bamboo",newpwd:"tobato"}</CODE></P>
+<UL>
+  <LI>oldpwd：旧密码</LI>
+  <LI>newpwd：新密码</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：设置头像  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/setimg/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为图片</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：用户反馈  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/feedback/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;type=product&amp;content=fb</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：课件评分  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/credit/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy&amp;credit=5</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：升级检测  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/chkupd/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;screen=md</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"key1":"value1","key2":"value2"}</CODE></P>
+<UL>
+  <LI>
+  <P>key取值为：</P>
+  <UL>
+    <LI>button_vlogo：企业logo图标</LI>
+    <LI>banner：首页轮播图</LI>
+    <LI>newver：新版本</LI></UL></LI>
+  <LI>
+  <P>value取值为：</P>
+  <UL>
+    <LI>button_vlogo：本地logo图标的MD5</LI>
+    <LI>banner：空</LI>
+    <LI>newver：空</LI></UL></LI></UL>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "newver":{"new":0},
+        "button_vlogo":{"new":0},
+        "banner":
+        [
+            {
+                "img":"图片地址1",
+                "url":"跳转地址1",
+                "md5":"5abcac00aa1ca3dcee0c4021db7b9c44"
+            },
+            {
+                "img":"图片地址2",
+                "url":"跳转地址2",
+                "md5":"438bfe695bac27585aee9d78d6fa6e4e"
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>new：是否有更新，1有0无</LI>
+  <LI>banner.img：图片地址</LI>
+  <LI>banner.url：跳转地址</LI>
+  <LI>banner.md5：图片的MD5</LI></UL>
+<HR>
+
+<P>接口描述：获取分类列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：</P>
+<PRE><CODE>/badou/gettaglist/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx
+&amp;type=notice|training|exam|task|shelf&amp;fmt=nest
+</CODE></PRE>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "name":"全部",
+            "tag":0,
+            "priority":1000,
+            "son":[]
+        },
+        {
+            "name":"分类1",
+            "tag":"3",
+            "priority":"3",
+            "son":[]
+        },
+        {
+            "name":"分类2",
+            "tag":"2",
+            "priority":"2",
+            "son":[]
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>tag：tag编号</LI>
+  <LI>name：分类名称</LI>
+  <LI>priority：分类优先级(按照降序显示,云端已排好序)</LI>
+  <LI>son：子分类信息</LI></UL>
+<HR>
+
+<P>接口描述：同步云端列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：</P>
+<PRE><CODE>/badou/sync_v2/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx
+&amp;type=notice|training|exam|task|shelf|survey&amp;tag=0&amp;begin=0&amp;limit=10
+</CODE></PRE>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "ttlcnt":2,
+        "newcnt":0,
+        "list":
+        [
+            {
+                "rid":"yyyy",
+                "ts":"1425611927",
+                "url":"访问地址1",
+                "subject":"课件1",
+                "top":"1",
+                "tag":"2",
+                "type":"2",
+                "read":1,
+                "offline",0,
+                "store":0,
+                "link_to":"",
+                "content":"{\"e\":5}",
+                "subtype":2,
+                "img":"图片地址1"
+            },
+            {
+                "rid":"yyyy",
+                "ts":"1428409604",
+                "url":"访问地址2",
+                "subject":"课件2",
+                "top":"0",
+                "tag":"4",
+                "type":"2",
+                "read":1,
+                "offline":1,
+                "store":1,
+                "link_to":"zzzz"
+                "content":"{\"e\":2}",
+                "subtype":2,
+                "img":"图片地址2"
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>ttlcnt：总记录数</LI>
+  <LI>newcnt：未读记录数</LI>
+  <LI>list.ts：资源更新时间</LI>
+  <LI>list.url：资源访问地址</LI>
+  <LI>list.top：是否置顶，1是0否</LI>
+  <LI>list.tag：分类</LI>
+  <LI>list.store：是否收藏，1是0否</LI>
+  <LI>list.offline：是否过期，1是0否</LI>
+  <LI>list.link_to：是否有绑定资源</LI>
+  <LI>list.read：是否已读/已考/已签，1是0否。（对于报名：0未报名，1待审核，2已通过，3已驳回）</LI>
+  <LI>list.subtype：<A href="http://192.168.1.192/接口文档/宏定义#resfmt">资源格式</A></LI>
+  <LI>list.content：如果read为1则有此字段,格式为json。对于培训,e表示评分;对于考试,s表示得分,d表示是否已完成批阅。</LI></UL>
+<HR>
+
+<P>接口描述：获取用户详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/viewusr/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "name":"cmx",
+        "dpt":"总部",
+        "headimg":"头像地址",
+        "score":24,
+        "training_total":20,
+        "study_total":20,
+        "study_rank":100,
+        "score_rank":86,
+        "study_over":4,
+        "score_over":223,
+        "ask":3,
+        "share":0,
+        "circle_lv":6,
+        "nmsg":0,
+        "store":2
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>name：用户名字</LI>
+  <LI>dpt：部门名字</LI>
+  <LI>headimg：头像地址</LI>
+  <LI>score：平均分</LI>
+  <LI>training_total：课件总数</LI>
+  <LI>study_total：已学习总数</LI>
+  <LI>study_rank：学习进度超过的百分比</LI>
+  <LI>score_rank：考试成绩超过的百分比</LI>
+  <LI>study_over：学习进度排第几名</LI>
+  <LI>score_over-考试成绩排第几名</LI>
+  <LI>share：同事圈贴子数</LI>
+  <LI>ask：问答发帖数</LI>
+  <LI>circle_lv：同事圈等级</LI>
+  <LI>nmsg：未读消息数</LI>
+  <LI>store：收藏记录数</LI></UL>
+<HR>
+
+<P>接口描述：获取资源详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/viewres/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","rid":"yyyy"}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "content":"\{\"e\":4\}",
+        "mcnt":71,
+        "ccnt":20,
+        "ecnt":127,
+        "eval":536,
+        "url":"资源地址",
+        "tag":"最新速递",
+        "subject":"标题",
+        "fmt":2,
+        "store":1
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>mcnt - 点赞数(废弃不用)</LI>
+  <LI>ccnt：评论数</LI>
+  <LI>ecnt：评分人数</LI>
+  <LI>eval：评分总和</LI>
+  <LI>content：用户的操作详情。json格式,e代表评分,c代表已签到。</LI>
+  <LI>url：资源内容url地址</LI>
+  <LI>tag：分类名称</LI>
+  <LI>subject：标题</LI>
+  <LI>fmt：<A href="http://192.168.1.192/接口文档/宏定义#resfmt">资源格式</A></LI>
+  <LI>store：是否收藏，1是0否</LI>
+  <LI>task：如果是签到,带此字段
+  <UL>
+    <LI>offline：是否过期,1是0否</LI>
+    <LI>place：签到地点</LI>
+    <LI>latitude：纬度</LI>
+    <LI>longitude：经度</LI>
+    <LI>comment：签到描述</LI>
+    <LI>deadline：截止时间</LI>
+    <LI>startline：起始时间</LI>
+    <LI>photo：是否要拍照</LI>
+    <LI>qrint：是否二维码，非0代表刷新间隔</LI></UL></LI>
+  <LI>entry：如果是报名，带此字段
+  <UL>
+    <LI>offline：是否过期，1是0否</LI>
+    <LI>deadline：截止时间</LI>
+    <LI>startline：起始时间</LI>
+    <LI>deadline_c：签到截止时间</LI>
+    <LI>startline_c：签到起始时间</LI>
+    <LI>maxusr：最多报名人数</LI>
+    <LI>enroll：当前已报名人数。</LI>
+    <LI>in：0未报名，1待审核，2已通过，3已驳回</LI>
+    <LI>content：富文本html的base64编码</LI></UL></LI>
+  <LI>plan：如果是计划，带此字段
+  <UL>
+    <LI>config：配置信息</LI>
+    <LI>now：当前位置，格式为"stage:offset"，比如"1:1"表示第1阶段的第1节点。如果全部学完为"done"。</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：搜索资源  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/search/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;key=查询关键字</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "notice":[],
+        "training":
+        [
+            {
+                "rid":"yyyy",
+                "ts":"1432020428",
+                "top":"0",
+                "subject":"testccc"
+            }
+        ],
+        "exam":[],
+        "task":[],
+        "shelf":[]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>notice - 命中的通知列表</LI>
+  <LI>training-命中的培训列表</LI>
+  <LI>exam-命中的考试列表</LI>
+  <LI>task-命中的任务列表</LI>
+  <LI>shelf-命中的橱窗列表
+  <UL>
+    <LI>subject -资源名称</LI>
+    <LI>ts -不用处理</LI>
+    <LI>top-不用处理</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：查看统计webview  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/dostat/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>查看统计webview</CODE></P>
+<HR>
+
+<P>接口描述：考试详情webview  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/doexam/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>考试详情webview</CODE></P>
+<HR>
+
+<P>接口描述：反馈调研webview  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/dostat/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>反馈调研webview</CODE></P>
+<HR>
+
+<P>接口描述：GPS签到  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/checkin_v2/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy&amp;lat=27.8655&amp;lon=133.9800</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为签到图片，无则留空</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：二维码签到  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/checkin_qr/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","rid":"yyyy","qr":"000123"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取动态二维码  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getqrcode/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","rid":"yyyy","fmt":"string"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0,"data":{"qrcode":"147231"}}</CODE></P>
+<HR>
+
+<P>接口描述：标记已读  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/markread/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取积分和等级  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/viewCircle?sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0, 
+    "data":
+    {
+        "circle_rp":50,
+        "circle_lv":6
+    }
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：发表资源评论  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/comment/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;rid=yyyy</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为评论正文</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取资源评论  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getcomment/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"page_no": 1, 
+"item_per_page":3,"uid":"xxxx","rid":"yyyy"}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "ttlcnt":2,
+        "result":
+        [
+            {
+                "employee_id":"139111805**",
+                "ts":"1428395023",
+                "info":"真的吗?",
+                "whom":"13911180501",
+                "imgurl":""
+            },
+            {
+                "employee_id":"135013975**",
+                "ts":"1428365926",
+                "info":"真不错",
+                "whom":"13501397537",
+                "imgurl":""
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>ttlcnt-总评论数</LI>
+  <LI>result-当前页的详情
+  <UL>
+    <LI>employee_id - 用户名字</LI>
+    <LI>ts -评论时间</LI>
+    <LI>info -评论内容</LI>
+    <LI>whom-员工id(指定回复时要用此参数)</LI>
+    <LI>imgurl-用户头像</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：获取资源的点评数据  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getmc2/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>rid数组</CODE></P>
+<PRE><CODE>[
+    "265f39e6bdc9205a4e55434436b48480",
+    "e26b0f11af6bf4d872327d967f775b53"
+]
+</CODE></PRE>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "rid":"yyyy",
+            "mcnt":71,
+            "ccnt":20,
+            "ecnt":127,
+            "eval":536
+        },
+        {
+            "rid":"yyyy",
+            "mcnt":0,
+            "ccnt":0,
+            "ecnt":19,
+            "eval":80
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>mcnt - 点赞数(废弃不用)</LI>
+  <LI>ccnt -评论数</LI>
+  <LI>ecnt -评分人数</LI>
+  <LI>eval-评分总和</LI></UL>
+<HR>
+
+<P>接口描述：获取考题批阅结果  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/checkcorrect/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>rid数组</CODE></P>
+<PRE><CODE>[
+    "265f39e6bdc9205a4e55434436b48480",
+    "e26b0f11af6bf4d872327d967f775b53"
+]
+</CODE></PRE>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "score":40,
+            "done":0
+        },
+        {
+            "score":80,
+            "done":1
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>score-考试得分</LI>
+  <LI>done-是否批完。1已完0未完。</LI></UL>
+<HR>
+
+<P>接口描述：发布同事圈视频  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pubvideo/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为MP4视频</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：发布同事圈外链  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pubweburl/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为url地址</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：发布同事圈图片  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pubphoto/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy&amp;idx=1</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>POST内容为图片</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：发布同事圈帖子  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/publish/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","type":"share", "anonymous":0,"content": 
+"发布正文内容","picture":""}</CODE></P>
+<UL>
+  <LI>type -发布类型,取值share。</LI>
+  <LI>content -发布正文。</LI>
+  <LI>picture -图片做base64编码(可选参数)</LI>
+  <LI>anonymous-1为匿名,0为公开。(可选参数)</LI></UL>
+<P>返回结果：<CODE>{"errcode":0,"data":{"qid":"yyyy"}}</CODE></P>
+<HR>
+
+<P>接口描述：获取单条同事圈帖子详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getonepub/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "employee_id":"\u6211",
+        "publish_ts":"1431682893",
+        "imgurl":"用户头像",
+        "content":"Ggdnc",
+        "photos":
+        [
+            "第一张图片",
+            "第二张图片"
+        ],
+        "videourl":"视频地址",
+        "weburl":
+        {
+            "img":"图片地址",
+            "txt":"摘要信息",
+            "url":"真实地址"
+        }
+        "whom":"10086",
+        "circle_lv":11,
+        "store":0
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>employee_id-用户名称</LI>
+  <LI>imgurl-用户头像</LI>
+  <LI>content-帖子内容</LI>
+  <LI>circle_lv-等级</LI>
+  <LI>whom-用户员工号</LI>
+  <LI>publish_ts-发布时间</LI>
+  <LI>videourl-视频地址(无则留空)</LI>
+  <LI>photos-多图的地址</LI>
+  <LI>weburl-外链信息</LI>
+  <LI>store-是否收藏</LI></UL>
+<HR>
+
+<P>接口描述：获取同事圈帖子列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getpublish/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","type":"share","page_no": 
+1,"item_per_page":3}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "ttlcnt":2,
+        "result":
+        [
+            {
+                "employee_id":"\u6211",
+                "qid":"yyyy",
+                "publish_ts":"1431682893",
+                "update_ts":"1431682893",
+                "reply_no":"0",
+                "credit_no":"0",
+                "imgurl":"用户头像",
+                "content":"Ggdnc",
+                "picurl":"首张图片",
+                "photos":
+                [
+                    "第一张图片"
+                ],
+                "videourl":"视频地址",
+                "uid":"xxxx",
+                "whom":"10086",
+                "circle_lv":11,
+                "delop":1,
+                "store":1
+            },
+            {
+                "employee_id":"10086",
+                "qid":"yyyy",
+                "publish_ts":"1431572620",
+                "update_ts":"1431667132",
+                "reply_no":"1",
+                "credit_no":"1",
+                "imgurl":"用户头像",
+                "content":"\u5927\u5bb6\u8f9b\n",
+                "picurl":"",
+                "photos":[],
+                "videourl":"",
+                "uid":"xxxx",
+                "whom":"1008611",
+                "circle_lv":4,
+                "delop":1,
+                "store":0
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>ttlcnt-总贴子数</LI>
+  <LI>result-当前页列表
+  <UL>
+    <LI>employee_id-用户名称</LI>
+    <LI>imgurl-用户头像</LI>
+    <LI>content-帖子内容</LI>
+    <LI>circle_lv-等级</LI>
+    <LI>delop-是否有删除权限,1有0无</LI>
+    <LI>whom-用户员工号</LI>
+    <LI>publish_ts-发布时间</LI>
+    <LI>picurl-图片地址(无则留空)</LI>
+    <LI>videourl-视频地址(无则留空)</LI>
+    <LI>reply_no-回复数</LI>
+    <LI>credit_no-点赞数</LI>
+    <LI>photos-多图的地址</LI>
+    <LI>store-是否收藏</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：删除同事圈帖子  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/delpublish/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：回复同事圈帖子  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/reply/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","qid":"yyyy","content": "回复内容"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：回复同事圈帖子的某条评论  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/replyat/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","qid":"yyyy","content": 
+"回复内容","whom":"zzzz"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：删除同事圈帖子的某条评论  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/delreply/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","qid":"yyyy","no": 2}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取同事圈帖子的回复  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getreply/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","qid":"yyyy","page_no": 
+1,"item_per_page":3}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "ttlcnt":2,
+        "result":
+        [
+            {
+                "t":1431582189,
+                "e":"张三",
+                "c":"不错",
+                "imgurl":"用户头像",
+                "uid":"xxxx"
+            },
+            {
+                "t":1431573601,
+                "e":"李四",
+                "c":"看看",
+                "imgurl":"",
+                "uid":"xxxx"
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>ttlcnt-总回复数</LI>
+  <LI>result-明细数组
+  <UL>
+    <LI>t-回复时间</LI>
+    <LI>e-回复人名字</LI>
+    <LI>c-回复内容</LI>
+    <LI>imgurl-回复人头像</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：获取用户的同事圈帖子列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/viewqas/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","type":"share","page_no": 
+1,"item_per_page":3}</CODE></P>
+<P>返回结果：<CODE>同getpublish</CODE></P>
+<HR>
+
+<P>接口描述：点赞同事圈帖子  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/setCredit/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;qid=yyyy</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取同事圈达人列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getdaren/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;page_no=1&amp;item_per_page=10</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "ttl":2,
+        "list":
+        [
+            {
+                "employee_id":"张三",
+                "eid":"10086",
+                "imgurl":"用户头像",
+                "circle_lv":12,
+                "detail":
+                {
+                    "p":32,
+                    "c":34,
+                    "r":35,
+                    "t":264
+                }
+            },
+            {
+                "employee_id":"李四",
+                "eid":"18611570887",
+                "imgurl":"",
+                "circle_lv":6,
+                "detail":
+                {
+                    "p":10,
+                    "c":31,
+                    "r":28,
+                    "t":137
+                }
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>ttl-总达人数</LI>
+  <LI>list-当前页详情
+  <UL>
+    <LI>employee_id-用户名字</LI>
+    <LI>eid-用户名</LI>
+    <LI>imgurl-用户头像</LI>
+    <LI>circle_lv-同事圈等级</LI>
+    <LI>detail-p为发帖数;c为点赞数;r为评论数;t为总分</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：获取同事圈话题列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getTopicList/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "话题1":"1432266191",
+        "话题2":"1432015778"
+    }
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：获取某个话题的帖子列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：</P>
+<PRE><CODE>/badou/getTopicInfo/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx
+&amp;topic=话题名称&amp;page_no=1&amp;item_per_page=10
+</CODE></PRE>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：<CODE>同getpublish</CODE></P>
+<HR>
+
+<P>接口描述：发布提问  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pubask/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","content":"问题","picture":"图片做base64编码"}</CODE></P>
+<UL>
+  <LI>content -发布内容。</LI>
+  <LI>picture -图片做base64编码(如无图片可不传此字段)</LI></UL>
+<P>返回结果：<CODE>{"errcode":0,"data":{"aid":"yyyy"}}</CODE></P>
+<HR>
+
+<P>接口描述：获取单个问题的详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getoneask/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","aid":"yyyy"}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "eid":"我",
+        "aid":"yyyy",
+        "count":"1",
+        "create_ts":"1431667401",
+        "content":"问题正文",
+        "imgurl":"用户头像",
+        "picurl":"",
+        "uid":"xxxx",
+        "whom":"10086",
+        "circle_lv":11,
+        "delop":1
+    }
+}
+</CODE></PRE>
+<UL>
+  <LI>eid-用户名称</LI>
+  <LI>count-回答数</LI>
+  <LI>create_ts-创建时间</LI>
+  <LI>content-问题正文</LI>
+  <LI>imgurl-用户头像</LI>
+  <LI>picurl-问题附图地址(无则留空)</LI>
+  <LI>whom-用户名</LI>
+  <LI>circle_lv-用户等级</LI>
+  <LI>delop-是否可删除</LI></UL>
+<HR>
+
+<P>接口描述：删除提问  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/delask/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","aid":"yyyy"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取提问列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getask/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","page_no": 1,"item_per_page":3}</CODE></P>
+<P>返回结果：<CODE>列表元素同getoneask</CODE></P>
+<HR>
+
+<P>接口描述：发布提问的回答  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pubanswer/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：</P>
+<PRE><CODE>{
+    "uid":"xxxx",
+    "content":"回答",
+    "aid":"yyyy",
+    "picture":"",
+    "whom":"zzzz"
+}
+</CODE></PRE>
+<UL>
+  <LI>content -发布内容。</LI>
+  <LI>picture -图片做base64编码(如无图片可不传此字段)</LI>
+  <LI>whom - 答复特定用户时为其uid（如非特定答复可不传）</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取提问的回答列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getanswer/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","aid":"yyyy","page_no": 
+1,"item_per_page":3}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "eid":"我",
+            "aid":"yyyy",
+            "count":"2",
+            "create_ts":"1431667419",
+            "content":"写的不错",
+            "imgurl":"用户头像地址",
+            "picurl":"",
+            "uid":"xxxx",
+            "circle_lv":11
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>eid-用户名称</LI>
+  <LI>count-回答点赞数</LI>
+  <LI>create_ts-创建时间</LI>
+  <LI>content-回答正文</LI>
+  <LI>imgurl-用户头像</LI>
+  <LI>picurl-回答附图地址(无则留空)</LI>
+  <LI>circle_lv-用户等级</LI></UL>
+<HR>
+
+<P>接口描述：给回答点赞  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/pollanswer/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","aid":"yyyy","ts":1422860174}</CODE></P>
+<UL>
+  <LI>ts - 答案时间,从getanswer接口获得。</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：获取私信用户列表  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getChatList/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "name":"100123",
+            "whom":100123,
+            "img":"",
+            "msginfo":
+            {
+                "ts":1431666393,
+                "content":"vv \u4e0d\u4ec5\u4ec5",
+                "own":"10086"
+            },
+            "msgcnt":0
+        },
+        {
+            "name":"10086",
+            "whom":1008611,
+            "img":"",
+            "msginfo":
+            {
+                "ts":1431666116,
+                "content":"v \u4e0d\u79ef\u6781",
+                "own":"10086"
+            },
+            "msgcnt":0
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>name-用户名称</LI>
+  <LI>whom-用户名</LI>
+  <LI>img-用户头像</LI>
+  <LI>msgcnt-未读计数</LI>
+  <LI>msginfo-最后一条消息的信息
+  <UL>
+    <LI>ts-时间</LI>
+    <LI>content-消息正文</LI>
+    <LI>own-谁发的</LI></UL></LI></UL>
+<HR>
+
+<P>接口描述：获取单用户私信详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getChatInfo/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;whom=10086</CODE></P>
+<P>传输协议：HTTP GET</P>
+<P>参数说明：</P>
+<UL>
+  <LI>whom - 对方用户名(从getChatList得到)</LI></UL>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        "{\"ts\":1431666393,\"content\":\"vv \\u4e0d\\u4ec5\\u4ec5\",\"own\":\"10086\"}"
+    ]
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：发送私信  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/chat/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;whom=10086</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","whom":"18611570887","content": "hi"}</CODE></P>
+<UL>
+  <LI>whom -接收方用户名</LI>
+  <LI>content -消息内容</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：删除私信  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/delchat/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx&amp;whom=10086</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","whom":"18611570887"}</CODE></P>
+<UL>
+  <LI>whom -接收方用户名</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：报名/取消报名  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/enroll/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx","rid":"yyyy","op":"in|out"}</CODE></P>
+<UL>
+  <LI>op -in为报名，out为取消报名</LI></UL>
+<P>返回结果：<CODE>{"errcode":0}</CODE></P>
+<HR>
+
+<P>接口描述：注册环信临时账号  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/reghxusr/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"hxusr":"xxxx"}</CODE></P>
+<UL>
+  <LI>使用场景：未登录时联系客服。客户端使用UUID或IMEI等字段注册。</LI></UL>
+<P>返回结果：<CODE>{"errcode":0,"data":{"hxpwd":"3e429c"}}</CODE></P>
+<HR>
+
+<P>接口描述：创建环信群组  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/genhxgrp/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：</P>
+<PRE><CODE>{
+    "uid":"xxxx",
+    "name":"群组名称",
+    "desc":"群组描述",
+    "msg":"欢迎消息",
+    "members":["成员1","成员2"]
+}
+</CODE></PRE>
+<P>返回结果：<CODE>{"errcode":0,"data":{"groupid":"yyyy"}}</CODE></P>
+<HR>
+
+<P>接口描述：获取环信登录密码  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/gethxpwd/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx"}</CODE></P>
+<P>返回结果：<CODE>{"errcode":0,"data":{"hxpwd":"3e429c"}}</CODE></P>
+<HR>
+
+<P>接口描述：获取环信用户通讯录  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/gethxtxl/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":"xxxx"}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "rolecfg":
+        {
+            "工程师":"1",
+            "销售员":"2",
+            "运营":"4"
+        },
+        "dptcfg":
+        [
+            {
+                "name":"研发部",
+                "dpt":101000000,
+                "son":
+                [
+                    {
+                        "name":"技术部",
+                        "dpt":101020000,
+                        "son":[]
+                    },
+                    {
+                        "name":"产品部",
+                        "dpt":101030000,
+                        "son":[]
+                    }
+                ]
+            },
+            {
+                "name":"运营部",
+                "dpt":103000000,
+                "son":[]
+            },
+            {
+                "name":"销售部",
+                "dpt":104000000,
+                "son":
+                [
+                    {
+                        "name":"直销部门",
+                        "dpt":104020000,
+                        "son":[]
+                    },
+                    {
+                        "name":"大客户部门",
+                        "dpt":104030000,
+                        "son":[]
+                    }
+                ]
+            }
+        ],
+        "usrlst":
+        [
+            {
+                "employee_id":"18503856523",
+                "name":"张三",
+                "department":"1030000",
+                "role":"1",
+                "imgurl":""
+            },
+            {
+                "employee_id":"15658775073",
+                "name":"李四",
+                "department":"1030000",
+                "role":"1",
+                "imgurl":""
+            }
+        ]
+    }
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：批量获取用户详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getusrinfo/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>用户名列表</CODE></P>
+<PRE><CODE>[
+    "10086",
+    "18611570887"
+]
+</CODE></PRE>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "name":"测试管理员",
+            "imgurl":"头像地址1"
+        },
+        {
+            "name":"cmx",
+            "imgurl":"头像地址2"
+        }
+    ]
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：批量获取内容详情  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/getresinfo/sys=ios|android|web|webapp&amp;ver=a.b.c&amp;uid=xxxx</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>内容rid列表</CODE></P>
+<PRE><CODE>[
+    "yyyy",
+    "zzzz"
+]
+</CODE></PRE>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    [
+        {
+            "subject":"标题1",
+            "fmt":1,
+            "type":"training"
+        },
+        {
+            "subject":"标题2",
+            "fmt":3,
+            "type":"exam"
+        }
+    ]
+}
+</CODE></PRE>
+<UL>
+  <LI>fmt：见<A href="http://192.168.1.192/接口文档/宏定义">资源格式定义</A></LI></UL>
+<HR>
+
+<P>接口描述：获取本人基础数据  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/qryusrinfo/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":xxxx,"whom":"用户名"}</CODE></P>
+<UL>
+  <LI>用户名必须是本人</LI></UL>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "store":2,
+        "department":"总部",
+        "role":"工程师",
+        "name":"张三"
+    }
+}
+</CODE></PRE>
+<HR>
+
+<P>接口描述：解析URL信息  <A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<P>接口地址：<CODE>/badou/parseurl/sys=ios|android|web|webapp&amp;ver=a.b.c</CODE></P>
+<P>传输协议：HTTP POST</P>
+<P>参数说明：<CODE>{"uid":xxxx,"url":"待解析的URL地址"}</CODE></P>
+<P>返回结果：</P>
+<PRE><CODE>{
+    "errcode":0,
+    "data":
+    {
+        "img":"图片地址",
+        "txt":"描述信息"
+    }
+}
+</CODE></PRE>
+<P><A href="http://192.168.1.192/接口文档/客户端接口#top">返回顶部</A></P>
+<DIV class="page-meta clearfix">
+<DIV class="last-updated pull-right">Last updated on 3rd Aug 2015                
+ </DIV></DIV></SECTION></DIV></DIV></DIV><FOOTER class="footer">
+<DIV class="container-fluid">
+<P class="copyright pull-right">Copyright © 2015 - <A 
+href="http://raneto.com/">Powered by Raneto</A></P></DIV></FOOTER>
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/jquery.min.js"></SCRIPT>
+	 
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/bootstrap.min.js"></SCRIPT>
+	 
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/highlight.pack.js"></SCRIPT>
+	 
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/jquery.fitvids.js"></SCRIPT>
+	 
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/masonry.pkgd.min.js"></SCRIPT>
+	 
+<SCRIPT src="客户端接口%20-%20兜行内部知识库_files/raneto.js"></SCRIPT>
+ </BODY></HTML>
